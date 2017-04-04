@@ -30,3 +30,8 @@ kubectl create -f k8s-deployment/boot-to-k8s-service-deployment.yml
 ```bash
 watch -n 1 curl -s http://192.168.64.8:31613/todo/
 ```
+
+### Gets all undone todos every second
+```bash
+watch -n 1 curl -s http://192.168.64.8:31613/todo/undone
+```
