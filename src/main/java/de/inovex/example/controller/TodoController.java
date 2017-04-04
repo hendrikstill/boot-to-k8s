@@ -26,4 +26,9 @@ public class TodoController {
         return todoRepository.findAll();
     }
 
+    @RequestMapping("/todo/undone")
+    Iterable<Todo> getAllUndone(){
+        return todoRepository.findByDone(false);
+    }
+
 }
