@@ -7,5 +7,5 @@ WORKDIR /app
 
 EXPOSE 8080
 
-CMD java -Xms128m -Xmx128m -jar /app/boot-to-k8s-service.jar
+CMD java -Xms128m -Xmx256m -jar /app/boot-to-k8s-service.jar
 
