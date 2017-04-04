@@ -24,7 +24,7 @@ kubectl create -f k8s-deployment/boot-to-k8s-service.yml
 kubectl create -f k8s-deployment/boot-to-k8s-service-deployment.yml
 ```
 
-## Usage`
+## Usage
 
 ### Gets all todos every second
 ```bash
