@@ -1,0 +1,14 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "boot-to-k8s-service"
+  namespace: todo-app
+  labels:
+    name: "boot-to-k8s-service"
+spec:
+  ports:
+    - port: 8080
+      protocol: "TCP"
+  selector:
+    name: "boot-to-k8s-service"
+  type: "LoadBalancer"

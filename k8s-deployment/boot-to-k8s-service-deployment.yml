@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: boot-to-k8s-service
+  namespace: todo-app
+  labels:
+    name: boot-to-k8s-service
+spec:
+  replicas: 2
+  template:
+    metadata:
+      name: boot-to-k8s-service
+      namespace: todo-app
+      labels:
+        name: boot-to-k8s-service
+    spec:
+      containers:
+        - name: "boot-to-k8s-service"
+          image: "hendrikstill/boot-to-k8s-service:v1"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+          ports:
+            - containerPort: 8080
+              protocol: "TCP"
