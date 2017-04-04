@@ -21,4 +21,9 @@ public class TodoController {
         return todoRepository.findOne(id);
     }
 
+    @RequestMapping("/todo")
+    Iterable<Todo> getAll(){
+        return todoRepository.findAll();
+    }
+
 }
