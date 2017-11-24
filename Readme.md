@@ -26,6 +26,10 @@ kubectl create -f k8s-deployment/boot-to-k8s-service-deployment.yml
 
 ## Usage
 
+### test locally with docker run
+`docker run --rm -p 8080:8080 hendrikstill/boot-to-k8s-service:v1`
+`curl http://localhost:8080/todo`
+
 ### Gets all todos every second
 ```bash
 watch -n 1 curl -s http://192.168.64.8:31613/todo/
