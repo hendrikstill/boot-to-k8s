@@ -30,3 +30,18 @@ kubectl create -f k8s-deployment/boot-to-k8s-service-deployment.yml
 ```bash
 watch -n 1 curl -s http://192.168.64.8:31613/todo/
 ```
+
+### Gets all undone todos every second
+```bash
+watch -n 1 curl -s http://192.168.64.8:31613/todo/undone
+```
+
+### Add a new todo
+```bash
+curl --request POST \
+  --url 'http://localhost:8080/todo' \
+  --header 'content-type: application/json' \
+  --data '{
+		"name": "new test todo"
+}'
+```
