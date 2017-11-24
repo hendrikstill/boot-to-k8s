@@ -35,3 +35,13 @@ watch -n 1 curl -s http://192.168.64.8:31613/todo/
 ```bash
 watch -n 1 curl -s http://192.168.64.8:31613/todo/undone
 ```
+
+### Add a new todo
+```bash
+curl --request POST \
+  --url 'http://localhost:8080/todo' \
+  --header 'content-type: application/json' \
+  --data '{
+		"name": "new test todo"
+}'
+```
