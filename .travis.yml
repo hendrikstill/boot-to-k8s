@@ -1,4 +1,9 @@
 language: java
 jdk:
  - openjdk8
- - openjdk9
+
+before_script:
+ - psql -c 'create database ci_test;' -U postgres
+
+services:
+ - postgresql
