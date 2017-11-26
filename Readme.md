@@ -2,6 +2,8 @@
 
 This is a simple demo application to show the deployment of a spring-boot application on kubernetes.
 
+[![Build Status](https://travis-ci.org/hendrikstill/boot-to-k8s.svg?branch=postgres)](https://travis-ci.org/hendrikstill/boot-to-k8s)
+
 ## Requirements
 * Running Kubernets-Cluster e.g. Minikube
 * Java 8
