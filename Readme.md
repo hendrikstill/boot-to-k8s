@@ -6,6 +6,7 @@ This is a simple demo application to show the deployment of a spring-boot applic
 * Running Kubernets-Cluster e.g. Minikube
 * Java 8
 * Docker-Hub login
+* Postgres
 
 ## Build
 ```bash
@@ -54,4 +55,8 @@ curl --request POST \
   --data '{
 		"name": "new test todo"
 }'
+```
+## Start Postgres 
+```bash
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=springbootdb -p 5432:5432 -d postgres:9.6
 ```
