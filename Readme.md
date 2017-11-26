@@ -13,6 +13,12 @@ This is a simple demo application to show the deployment of a spring-boot applic
 
 docker build -t hendrikstill/boot-to-k8s-service:v1
 ```
+## build with docker
+
+`docker run -it --rm -v $PWD/boot-to-k8s:/data openjdk:8-jdk-alpine /bin/ash`
+`./mvnw clean package`
+
+afterwards you will see the *target* folder inside the boot-to-k8s folder
 
 ## Relase
 ```bash
