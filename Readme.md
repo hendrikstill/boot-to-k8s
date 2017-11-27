@@ -39,6 +39,12 @@ kubectl create -f k8s-deployment/boot-to-k8s-service-deployment.yml
 `docker run --rm -p 8080:8080 hendrikstill/boot-to-k8s-service:v1`
 `curl http://localhost:8080/todo`
 
+### Configure other Database
+
+```bash
+docker run --rm -e SPRING_DATASOURCE_URL=jdbc:postgresql://mypostgres:5432/ci_test -p 8080:8080 hendrikstill/boot-to-k8s-service:v1
+```
+
 ### Gets all todos every second
 ```bash
 watch -n 1 curl -s http://192.168.64.8:31613/todo/
